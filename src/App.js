@@ -4,6 +4,7 @@ import './App.css'
 import Drawer from './Components/Drawer/Drawer';
 import Navbar from './Components/Navbar/Navbar';
 import TableOne from './Components/Pages/TablesComponents/TableOne/TableOne';
+import RoutesComponent from './routes.js';
 
 
 function App() {
@@ -18,10 +19,10 @@ function App() {
   return (
     <div>
       <Navbar handleClickDrawer={handleClickDrawer} />
-      <div className="flex justify-between items-top fixed w-screen h-screen mr-[-765px]">
+      <div className="flex justify-between items-top fixed w-screen h-screen">
         {isDrawer ? <Drawer /> : ""}
         <div className={`w-full flex items-center justify-center`}>
-          <TableOne />
+          <RoutesComponent />
         </div>
       </div>
     </div>
