@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+
+import TextDrawer from "../TextDrawer/TextDrawer";
 
 function Drawer() {
     return (
@@ -7,18 +8,7 @@ function Drawer() {
             <div className="drawer-side max-h-[650px]">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-50 h-full bg-base-200 flex ">
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/grafico1">Primeira tabela</Link>
-                    </li>
-                    <li>
-                        <Link to="/grafico2">Segunda tabela</Link>
-                    </li>
-                    <li>
-                        <Link to="/grafico3">Terceira tabela</Link>
-                    </li>
+                    <TextDrawer />
                 </ul>
             </div>
         </div>
