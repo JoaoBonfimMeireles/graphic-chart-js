@@ -3,9 +3,8 @@ import './App.css'
 
 import Drawer from './Components/Drawer/Drawer';
 import Navbar from './Components/Navbar/Navbar';
-import TableOne from './Components/Pages/TablesComponents/TableOne/TableOne';
-import RoutesComponent from './routes.js';
-
+import TableOne from './Components/Pages/TableOne/TableOne';
+import RoutesComponent from './routes';
 
 function App() {
 

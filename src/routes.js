@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Components/Pages/Home/Index";
-import TableOne from "./Components/Pages/TablesComponents/TableOne/TableOne";
-import TableTwo from "./Components/Pages/TablesComponents/TableTwo/TableTwo";
-import TableThree from "./Components/Pages/TablesComponents/TableThree/TableThree";
+import TableOne from "./Components/Pages/TableOne/TableOne";
+import TableTwo from "./Components/Pages/TableTwo/TableTwo";
+import TableThree from "./Components/Pages/TableThree/TableThree";
 
 const RoutesComponent = () => {
     return (
-        <BrowserRouter basename="/meu-app">
+        <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/grafico1" element={<TableOne />} />
-                <Route path="/grafico2" element={<TableTwo />} />
-                <Route path="/grafico3" element={<TableThree />} />
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/grafico1" element={<TableOne />} />
+                <Route exact path="/grafico2" element={<TableTwo />} />
+                <Route exact path="/grafico3" element={<TableThree />} />
             </Routes>
         </BrowserRouter>
     );
