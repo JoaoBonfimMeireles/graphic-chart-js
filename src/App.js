@@ -18,9 +18,9 @@ function App() {
   return (
     <div>
       <Navbar handleClickDrawer={handleClickDrawer} />
-      <div className="flex justify-center items-center fixed">
+      <div className="flex justify-between items-top fixed w-screen h-screen mr-[-765px]">
         {isDrawer ? <Drawer /> : ""}
-        <div className={`artboard artboard-horizontal phone-4 relative top-[50px] left-[20%]`}>
+        <div className={`w-full flex items-center justify-center`}>
           <TableOne />
         </div>
       </div>
