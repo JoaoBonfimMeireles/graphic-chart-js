@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 import Calender from "../Calender/Calender";
+import { Link } from 'react-router-dom';
 
-function Navbar({handleClickDrawer}) {
+function Navbar({ handleClickDrawer }) {
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -21,7 +22,9 @@ function Navbar({handleClickDrawer}) {
                 </div>
             </div>
             <div className="navbar-center">
-                <img className="max-w-20" src="https://institucional.amil.com.br/sites/g/files/wrvpjl431/files/amil.png"/>
+                <Link to="/">
+                    <img className="max-w-20" src="https://institucional.amil.com.br/sites/g/files/wrvpjl431/files/amil.png" />
+                </Link>
             </div>
             <div className="navbar-end">
                 <div className="form-control">
