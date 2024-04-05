@@ -4,8 +4,10 @@ export default function Home() {
     return(
         <div>
             tetse
-            <Link to="/grafico1">1</Link><br />
-            <Link to="/grafico2">2</Link><br />
+            <Link to="/">Home</Link>
+            <Link to="/grafico1">Primeira tabela</Link>
+            <Link to="/grafico2">Segunda tabela</Link>
+            <Link to="/grafico3">Terceira tabela</Link>
         </div>
     )
 }
