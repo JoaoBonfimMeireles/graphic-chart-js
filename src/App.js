@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import './App.css'
 
 import Drawer from './Components/Drawer/Drawer';
 import Navbar from './Components/Navbar/Navbar';
 import RoutesComponent from './RoutesComponent';
-import Home from './Components/Pages/Home/Index';
 
 function App() {
 
@@ -19,7 +18,8 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar handleClickDrawer={handleClickDrawer} />
+        <Navbar 
+        handleClickDrawer={handleClickDrawer}/>
         <div className="flex justify-between items-top fixed w-screen h-screen">
           {isDrawer && <Drawer />}
           <div className={`w-full flex items-center justify-center`}>

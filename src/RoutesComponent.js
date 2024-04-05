@@ -1,10 +1,13 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Components/Pages/Home/Index";
 import TableOne from "./Components/Pages/TableOne/TableOne";
 import TableTwo from "./Components/Pages/TableTwo/TableTwo";
 import TableThree from "./Components/Pages/TableThree/TableThree";
 
 const RoutesComponent = () => {
+
+    const location = useLocation(); 
+    
     return (
         <Routes>
             <Route exact path="/" element={<Home />} />

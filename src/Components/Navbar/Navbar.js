@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 
 import Calender from "../Calender/Calender";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar({ handleClickDrawer }) {
+    const location = useLocation().pathname;
+    const homeIsLocation = location !== "/"
+    console.log(location.pathname);
 
     const [isChecked, setIsChecked] = useState(false);
-
 
     const handleCheckboxChange = (e) => {
         setIsChecked(e.target.checked)
     }
 
     return (
-        <div className="navbar bg-base-100 bg-blue-400 text-blue-950">
+        <div className="navbar bg-base-100 bg-blue-400 text-blue-950 h-16">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" onClick={handleClickDrawer}>
@@ -29,17 +31,17 @@ function Navbar({ handleClickDrawer }) {
             <div className="navbar-end">
                 <div className="form-control">
                     <label className="label cursor-pointer">
-                        <input
-                            type="checkbox"
-                            checked={isChecked}
-                            onChange={handleCheckboxChange}
-                            className="checkbox mx-6 border-blue-950"
-                        />
-                        {isChecked ?
-                            <Calender /> :
-                            <h1 className="text-xl">
-                                Abrir calendário
-                            </h1>}
+                        {homeIsLocation ?
+                            <>
+                                <input
+                                    type="checkbox"
+                                    checked={isChecked}
+                                    onChange={handleCheckboxChange}
+                                    className="checkbox mx-6 border-blue-950"
+                                />
+                                {isChecked ? <Calender /> : <h1 className="text-xl"> Abrir calendário</h1>}
+                            </>
+                            : null}
                     </label>
                 </div>
 
