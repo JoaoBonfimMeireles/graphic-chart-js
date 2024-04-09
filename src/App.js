@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, useLocation } from "react-router-dom";
 import './App.css'
-
 import Drawer from './Components/Drawer/Drawer';
 import Navbar from './Components/Navbar/Navbar';
 import RoutesComponent from './RoutesComponent';
